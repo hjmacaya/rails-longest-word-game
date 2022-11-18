@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+ .letter-box {
+  width: 80px;
+  height: 80px;
+  color: white;
+  background-color: black;
+  font-size: 55px;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+.form-box {
+  width: 400px;
+  height: 100px;
+  margin: auto;
+}

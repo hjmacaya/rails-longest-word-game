@@ -1,0 +1,23 @@
+<div class="container text-center align-middle p-5">
+
+  <h1> New Game </h1>
+
+  <div class="d-flex justify-content-between mt-3">
+    <% @letters.each do |letter| %>
+    <div class="letter-box">
+      <%= letter %>
+    </div>
+    <% end %>
+  </div>
+  <br>
+  <div class="form-box">
+    <form action="/score" method="POST" data-turbo="false">
+      <div class="mb-3">
+        <label for="inputWord" class="form-label"> Type the word </label>
+        <input type="text" id="inputWord" class="form-control" name="word">
+      </div>
+      <input type="submit" value="Send word" class="btn btn-success">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    </form>
+  </div>
+</div>
